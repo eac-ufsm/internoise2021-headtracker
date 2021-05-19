@@ -1,0 +1,6 @@
+src/output
+src/dep
+*.asv
+*.rar
+*.pyc 
+*.ico
