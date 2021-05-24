@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="464.12479mm"
+   height="334.23648mm"
+   viewBox="0 0 464.12479 334.23648"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
@@ -18,10 +18,10 @@
      id="defs2">
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 148.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="210 : 148.5 : 1"
-       inkscape:persp3d-origin="105 : 99 : 1"
+       inkscape:vp_x="0 : 185.73648 : 1"
+       inkscape:vp_y="0 : 999.99998 : 0"
+       inkscape:vp_z="210.00001 : 185.73648 : 1"
+       inkscape:persp3d-origin="105.00001 : 136.23648 : 1"
        id="perspective3420" />
   </defs>
   <sodipodi:namedview
@@ -32,8 +32,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.1767767"
-     inkscape:cx="-1935.162"
-     inkscape:cy="301.91043"
+     inkscape:cx="382.47849"
+     inkscape:cy="737.91042"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -43,7 +43,11 @@
      inkscape:window-height="745"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -59,7 +63,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(613.20905,115.35833)">
     <path
        style="fill:#000000;stroke:#000000;stroke-width:0.232833"
        id="path843"
@@ -77,7 +82,7 @@
        id="path867"
        d="m -391.0759,170.79127 c 1.27027,3.23519 2.49052,6.51243 3.5304,9.89059 1.06603,2.85963 1.39854,5.95666 1.57143,9.09744 0.25355,3.01796 0.41833,6.04603 0.49479,9.08053 0.0595,2.23576 0.0584,4.47262 0.0416,6.70925 -0.33514,1.94158 -0.67575,3.91552 -1.24602,5.76252 -0.5485,1.327 -0.37598,2.9556 -1.01054,4.20945 -0.43132,0.83768 -0.70635,1.81995 -1.16536,2.62532 -0.0589,0.14555 -0.11791,0.29112 -0.17687,0.43668 0,0 6.76752,-3.99445 6.76752,-3.99445 v 0 c 0.0626,-0.1351 0.12521,-0.2702 0.18781,-0.40531 0.35491,-0.91544 0.8008,-1.76338 1.11311,-2.71002 0.35888,-1.40117 0.45155,-2.90587 0.92165,-4.26587 0.46829,-1.98084 0.95342,-3.98804 1.12322,-6.05746 -0.0229,-2.23807 -0.0317,-4.47738 -0.10935,-6.71355 -0.14382,-3.02356 -0.36004,-6.03838 -0.5851,-9.05307 -0.21424,-3.23676 -0.49574,-6.45295 -1.69522,-9.35737 -1.13046,-3.35414 -2.39414,-6.62788 -3.39577,-10.05748 0,0 -6.36735,4.8028 -6.36735,4.8028 z" />
     <path
-       style="fill:#1a1a1a;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:bevel"
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:0.4;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
        id="path869"
        d="m -365.93166,207.3424 c 0.13128,2.29264 0.0878,4.59095 0.0663,6.886 -0.0131,1.33036 -0.007,0.67732 -0.0187,1.9591 0,0 9.87784,-5.03301 9.87784,-5.03301 v 0 c -0.0118,-1.26954 -0.006,-0.62285 -0.0187,-1.94005 -0.0219,-2.31763 -0.0629,-4.63821 0.0663,-6.95355 0,0 -9.97302,5.08151 -9.97302,5.08151 z" />
     <path
@@ -152,7 +157,7 @@
          style="stroke-width:0.264583" /></text>
     <text
        xml:space="preserve"
-       style="font-size:16.93333333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583;"
+       style="font-size:16.9333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
        x="-332.31665"
        y="-115.35833"
        id="text945"><tspan
@@ -160,7 +165,7 @@
          id="tspan943"
          x="-332.31665"
          y="-115.35833"
-         style="stroke-width:0.264583;font-size:16.93333333px;"> </tspan></text>
+         style="font-size:16.9333px;stroke-width:0.264583"> </tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22.5778px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
@@ -221,7 +226,7 @@
        id="path877-8"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1,4;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 4;stroke-dashoffset:0;stroke-opacity:1"
        d="M -320.18904,86.349939 -407.3395,102.44325"
        id="path877-8-3"
        sodipodi:nodetypes="cc" />
