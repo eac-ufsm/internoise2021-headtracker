@@ -65,9 +65,9 @@ Support files for the Internoise 2021 paper Head tracker using webcam for aurali
 The HeadTracker application currently sends to the server yaw, pitch and roll information in degrees, where downwards pitch and counterclockwise roll and yaw are denoted with negative angles, such that the full rotation is bounded between -180° and 180°, as illustrated bellow. The data are json encoded bytes (deppending on the application it needs to be decoded).
 
 
-![Alt text](/images/coord.svg)
-<img width="50px" src="https://github.com/eac-ufsm/internoise2021-headtracker/blob/main/images/coord.svg"/>
-
+<p align="center">
+<img width="400px" src="https://github.com/eac-ufsm/internoise2021-headtracker/blob/main/images/coord.svg"/>
+</p>
   
   
 
