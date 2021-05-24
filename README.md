@@ -62,14 +62,15 @@ Support files for the Internoise 2021 paper Head tracker using webcam for aurali
 
 
 ### Interpreting received data
-The HeadTracker application currently sends to the server yaw, pitch and roll information in degrees, where downwards pitch and counterclockwise roll and yaw are denoted with negative angles, such that the full rotation is bounded between -180° and 180°, as illustrated bellow. The data are json encoded bytes (deppending on the application it needs to be decoded).
+The HeadTracker application currently sends to the server yaw, pitch and roll information in degrees, where downwards pitch and counterclockwise roll and yaw are denoted with negative angles, such that the full rotation is bounded between -180° and 180°, as illustrated bellow. 
 
 
 <p align="center">
 <img width="400px" src="https://github.com/eac-ufsm/internoise2021-headtracker/blob/main/images/coord.svg"/>
 </p>
   
-  
+The sent data are strings encoded into bytes,  for e.g. if the sent/received message is: **b'-5,10,0'**,  the corresponding coordinates are **yaw**=-5°, **pitch**=10° and **roll**=0°  &#8212; depending on the application the data needs to be decoded for proper use.
+
 
 ### Example: reading HeadTracker output data with Matlab
 Bellow you can find a snippet of how to connect to the UDP address and convert the binary data to matlab array.
