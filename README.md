@@ -43,10 +43,7 @@ Support files for the Internoise 2021 paper Head tracker using webcam for aurali
 
 <br/><br/>
 ## Setup python environment
-  This application only requires you to run ```pip install mediapipe==0.8.3.1```. 
-  
-  
-  However for the sake of good practices, we recommend you create a new python enviroment and install the required libraries with:
+  - This application only requires you to run ```pip install mediapipe==0.8.3.1```. However for the sake of good practices, we recommend you create a new python enviroment and install the required libraries with:
   
   ```R
   cd internoise2021-headtracker/src/
@@ -57,7 +54,7 @@ Support files for the Internoise 2021 paper Head tracker using webcam for aurali
 
   pip install -r requirements.txt
   ``` 
-
+- MediaPipe supports Python 3.6 to 3.8.
 
 ## Using the HeadTracker
   The application can be initialized with:
