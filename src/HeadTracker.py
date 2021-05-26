@@ -8,7 +8,7 @@ import socket
 import threading
 import numpy as np 
 from face_geometry import get_metric_landmarks, PCF, procrustes_landmark_basis
-
+import sys
 
 def get_head_orientation():
     rvec = rotation_vector
@@ -44,6 +44,13 @@ def send_to_server():
 
   
 def processing():
+    # Select the mechanism to quit the window according to the OS 
+    winOS = ['win32', 'cygwin']
+    if sys.platform in winOS:
+      kill_on_x = True  # add option to use mouse to quit (checks the current 'window state')
+    else: 
+      kill_on_x = False # only allow to quit using "Esc" 
+
     # Initialize UDP server
     global rotation_vector, translation_vector
     global s, IP, PORT
@@ -132,15 +139,17 @@ def processing():
           cv2.imshow(window_name, image)
           cv2.setWindowProperty(window_name, cv2.WND_PROP_TOPMOST, 1)
 
+          # Kill it when you press "Esc"
           if cv2.waitKey(5) & 0xFF == 27:
-              break
-            
+              break 
           # Kill it when you mouse click 'quit window'
-          if cv2.getWindowProperty(window_name,cv2.WND_PROP_VISIBLE) < 1: 
-              print('Goodbye!')      
-              cv2.destroyAllWindows()
-              cap.release() 
+          if kill_on_x and cv2.getWindowProperty(window_name,cv2.WND_PROP_VISIBLE) < 1: 
+              break
 
-      
+      print('Goodbye!')      
+      cv2.destroyAllWindows()
+      cap.release()
+            
+
 if __name__ == "__main__":
     processing()
