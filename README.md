@@ -37,7 +37,7 @@ Support files for the Internoise 2021 paper Head tracker using webcam for aurali
 |    OS   |         Support         |
 |:-------:|:-----------------------:|
 | Windows |   Tested on Windows 10  |
-|  macOS  | Requires version 10.15+ |
+|  macOS  | Tested on v10.15 and v11.2.1 (amd_64) |
 |  Linux  |      Not tested yet     |
 
 
