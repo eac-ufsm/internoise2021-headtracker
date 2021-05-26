@@ -32,6 +32,15 @@ Support files for the Internoise 2021 paper Head tracker using webcam for aurali
   - ```/audios:``` The raw files for the audio examples in the paper.  
   - ```/videos:``` The images related to the head movements that produced the audios in the paper.
 
+
+## System support 
+|    OS   |         Support         |
+|:-------:|:-----------------------:|
+| Windows |   Tested on Windows 10  |
+|  macOS  | Requires version 10.15+ |
+|  Linux  |      Not tested yet     |
+
+
 <br/><br/>
 ## Setup python environment
   This application only requires you to run ```pip install mediapipe==0.8.3.1```. 
@@ -59,6 +68,8 @@ Support files for the Internoise 2021 paper Head tracker using webcam for aurali
  - **Alternatively you may use the Windows executables distributed [here](https://github.com/eac-ufsm/internoise2021-headtracker/releases/tag/1.05.23). Notice that you don't need to setup an environment, or install anything else, in order to use the ```.exe``` standalones.**
 
 - Connect to any plataform that accepts UDP/IP connection using the address: ```IP:'127.0.0.1'```  and ```PORT:50050``` .
+
+- In order to close the app, mouse clicking "quit the window" might not work in all operating systems, as a general rule use "Esc" to finish the process, while we work in a more elegant solution for this issue.
 
 
 ### Interpreting received data
