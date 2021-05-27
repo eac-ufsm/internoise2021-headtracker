@@ -1,4 +1,4 @@
-# Inter-noise 2021: Head tracker using webcam for auralization
+# Internoise 2021: Head tracker using webcam for auralization
 <p align="left">
   <a href="https://github.com/eac-ufsm/internoise2021-headtracker/releases/" target="_blank">
     <img alt="GitHub release" src="https://img.shields.io/github/v/release/eac-ufsm/internoise2021-headtracker?include_prereleases&style=flat-square">
@@ -19,7 +19,7 @@
 </p>
 <hr>
 
-Support files for the Internoise 2021 paper Head tracker using webcam for auralization
+Support files for the Internoise 2021 paper "Head tracker using webcam for auralization".
 
 ## Description
 **Head tracker via camera face tracking and communication via UDP protocol.**
@@ -104,20 +104,26 @@ end
 ```
 Other examples of the connection to matlab are posted [here](https://github.com/eac-ufsm/internoise2021-headtracker/tree/main/test).
 
+<br/>
 
+## Issues
 
-<br/><br/>
----
-# Bibtex: cite us
+ - The code works for the main camera, if you experience difficulties, try enabling only one in your system.
+
+# Cite us
+
+> D. R. Carvalho, W. D’A. Fonseca, and P. H. Mareze. Head tracker using webcam for auralization. In *50th International Congress and Exposition on Noise Control Engineering - Internoise 2021*, pages 1–10, Washington, DC, USA, Aug. 2021.
+
+**Bibtex:**
 ```
-@inproceedings{carvalho2021internoise, 
-    author  = {Davi Rocha Carvalho and William D’Andrea Fonseca and Paulo Henrique Mareze}, 
-    title   = {Head tracker using webcam for auralization}, 
-    journal = {50th Internoise}, 
-    year    = {2021}, 
-    pages   = {}, 
-    note    = {Preprint}, 
-    doi     = {},
+@InProceedings{headtracker:2021,
+  author    = {Davi Rocha Carvalho and William {\relax D'A}ndrea Fonseca and Paulo Henrique Mareze},
+  booktitle = {{50th International Congress and Exposition on Noise Control Engineering - Internoise 2021}},
+  title     = {Head tracker using webcam for auralization},
+  year      = {2021},
+  address   = {Washington, DC, USA},
+  month     = {Aug.},
+  pages     = {1--10},
 }
 ```
 
