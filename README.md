@@ -38,7 +38,7 @@ Support files for the Internoise 2021 paper "Head tracker using webcam for aural
 |:-------:|:-----------------------:|
 | Windows |   Tested on Windows 10  |
 |  macOS  | Tested on v10.15 and v11.2.1 (amd_64) |
-|  Linux  |      Not tested yet     |
+|  Linux  | Tested on Ubuntu 18.04.5 LTS          |
 
 
 <br/><br/>
@@ -108,7 +108,7 @@ Other examples of the connection to matlab are posted [here](https://github.com/
 
 ## Issues
 
- - The code works for the main camera, if you experience difficulties, try enabling only one in your system.
+ - So far the code defaults to the main camera, if you experience difficulties, you can either enable only the desired one in your system or directly select it [in the code](https://github.com/eac-ufsm/internoise2021-headtracker/blob/1f2dada96790360cbd68de936ef04852579f9a27/src/HeadTracker.py#L85) by changing the index in ```cv2.VideoCapture(0)```.
 
 # Cite us
 
