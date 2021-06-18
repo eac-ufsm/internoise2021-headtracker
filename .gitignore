@@ -1,5 +1,6 @@
 src/output
 src/dep
+src/.vsccode/*
 *.asv
 *.rar
 *.pyc 
