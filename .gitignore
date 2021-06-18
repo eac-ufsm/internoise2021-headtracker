@@ -1,6 +1,7 @@
 src/output
 src/dep
-src/.vsccode/*
+src/.vscode
+src/__pycache__
 *.asv
 *.rar
 *.pyc 
