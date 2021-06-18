@@ -64,7 +64,13 @@ def processing():
     points_idx = points_idx + [key for (key,val) in procrustes_landmark_basis]
     points_idx = list(set(points_idx))
     points_idx.sort()
-    frame_height, frame_width, channels = (480 , 640, 3)
+
+    cap = cv2.VideoCapture(0)
+    frame_width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
+    frame_height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
+    print(frame_width, frame_height)
+
+    # frame_height, frame_width, channels = (480 , 640, 3)
     # pseudo camera internals
     focal_length = frame_width
     center = (frame_width/2, frame_height/2)
@@ -82,11 +88,11 @@ def processing():
     with mp_face_mesh.FaceMesh(
                 min_detection_confidence=0.5,
                 min_tracking_confidence=0.5) as face_mesh:
-      cap =  cv2.VideoCapture(0) 
+      # cap =  cv2.VideoCapture(0) 
       cap.set(cv2.CAP_PROP_FRAME_WIDTH, frame_width)
       cap.set(cv2.CAP_PROP_FRAME_HEIGHT, frame_height)
       cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
-      cap.set(cv2.CAP_PROP_FPS, 120)
+      # cap.set(cv2.CAP_PROP_FPS, 30)
 
       while cap.isOpened():
         success, image = cap.read()
@@ -146,9 +152,10 @@ def processing():
           if kill_on_x and cv2.getWindowProperty(window_name,cv2.WND_PROP_VISIBLE) < 1: 
               break
 
-      print('Goodbye!')      
+      print('Goodbye!')    
+      cap.release()  
       cv2.destroyAllWindows()
-      cap.release()
+      
             
 
 if __name__ == "__main__":
