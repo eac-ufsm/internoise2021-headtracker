@@ -6,3 +6,5 @@ src/__pycache__
 *.rar
 *.pyc 
 *.ico
+*.sofa
+/test/*.wav
