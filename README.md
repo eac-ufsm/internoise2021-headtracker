@@ -31,7 +31,7 @@ Support files for the Internoise 2021 paper "Head tracker using webcam for aural
   - ```/test:``` Presents auralization experiments in MATLAB using the HeadTracker.
   - ```/audios:``` The raw files for the audio examples in the paper.  
   - ```/videos:``` The images related to the head movements that produced the audios in the paper.
-  - - ```/presentation:``` PDF conference presentation of the paper.
+  - ```/presentation:``` PDF conference presentation of the paper.
 
 
 ## System support 
