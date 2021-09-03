@@ -103,7 +103,7 @@ while true
 end 
  
 ```
-Other examples of the connection to matlab are posted [here](https://github.com/eac-ufsm/internoise2021-headtracker/tree/main/test).
+Other examples of the connection to matlab are posted [here](https://github.com/eac-ufsm/internoise2021-headtracker/releases).
 
 <br/>
 
