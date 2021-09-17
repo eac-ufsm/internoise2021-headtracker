@@ -113,7 +113,7 @@ Other examples of the connection to matlab are posted [here](https://github.com/
 
 # Cite us
 
-> D. R. Carvalho; W. D’A. Fonseca; J. Hollebon; P. H. Mareze; F. M. Fazi. Head tracker using webcam for auralization. In *50th International Congress and Exposition on Noise Control Engineering — Internoise 2021*, pages 1–12, Washington, DC, USA, Aug. 2021. doi: [10.3397/IN-2021-2956](https://doi.org/10.3397/IN-2021-2956).
+> D. R. Carvalho; W. D’A. Fonseca; J. Hollebon; P. H. Mareze; F. M. Fazi. Head tracker using webcam for auralization. In *50th International Congress and Exposition on Noise Control Engineering — Internoise 2021*, pages 5071–5082(12), Washington, DC, USA, Aug. 2021. doi: [10.3397/IN-2021-2956](https://doi.org/10.3397/IN-2021-2956).
 
 **Bibtex:**
 ```
@@ -124,7 +124,7 @@ Other examples of the connection to matlab are posted [here](https://github.com/
   year      = {2021},
   address   = {Washington, DC, USA},
   month     = {Aug.},
-  pages     = {1--12},
+  pages     = {5071--5082(12)},
   doi       = {10.3397/IN-2021-2956},
 }
 ```
