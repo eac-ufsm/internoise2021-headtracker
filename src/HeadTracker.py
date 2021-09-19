@@ -121,7 +121,7 @@ def processing():
           model_points = metric_landmarks[0:3, points_idx].T
           image_points = landmarks[0:2, points_idx].T * np.array([frame_width, frame_height])[None,:]
 
-          success, rotation_vector, translation_vector = cv2.solvePnP(model_points, image_points, camera_matrix, dist_coeff, flags=cv2.cv2.SOLVEPNP_ITERATIVE)
+          success, rotation_vector, translation_vector = cv2.solvePnP(model_points, image_points, camera_matrix, dist_coeff, flags=cv2.SOLVEPNP_ITERATIVE)
 
           (nose_end_point2D, jacobian) = cv2.projectPoints(np.array([(0.0, 0.0, 25.0)]), rotation_vector, translation_vector, camera_matrix, dist_coeff)
           
