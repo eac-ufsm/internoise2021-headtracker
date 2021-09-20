@@ -10,7 +10,7 @@ hrtfData = double(ARIDataset.hrtfData);
 hrtfData = permute(hrtfData,[2,3,1]);
 % Separar posições de fonte
 sourcePosition = ARIDataset.sourcePosition(:,[1,2]);
-sourcePosition(:,1) = sourcePosition(:,1) - 180;
+sourcePosition(:,1) = -(sourcePosition(:,1) - 180);
 
 
 %% Carregar audio mono
@@ -46,8 +46,12 @@ udpr = dsp.UDPReceiver('RemoteIPAddress', '127.0.0.1',...
 audioUnderruns = 0;
 audioFiltered = zeros(sigsrc.SamplesPerFrame,2);
 
-pitch = 0;
 yaw = 0;
+past_yaw = 0;
+pitch = 0;
+past_pitch = 0;
+slope_yaw = [];
+slope_pitch = [];
 
 s_azim = 0;
 s_elev = 0;
@@ -55,23 +59,24 @@ s_elev = 0;
 idx_pos = dsearchn(sourcePosition, [s_azim, s_elev]);
 release(deviceWriter)
 release(sigsrc)
+tic % start head tracker extrapolation time estimate
+t2 = 0;
 
-tic
-while toc < 30
+while true
     % Ler orientação atual do HeadTracker.
     py_output = step(udpr);
     
     if ~isempty(py_output)
-        data = str2num(convertCharsToStrings(char(py_output))); %#ok<*ST2NM>
+        data = str2double(split(convertCharsToStrings(char(py_output)), ','));
         yaw = data(1);
         pitch = data(2);
-        roll = data(3);
+        roll = data(3);        
     end
     
-    idx_pos = dsearchn(sourcePosition, [s_azim - yaw, s_elev - pitch]);
-
+    idx_pos = dsearchn(sourcePosition, [s_azim + yaw, s_elev - pitch]);
+%     sourcePosition(idx_pos, :)
     % Obtain a pair of HRTFs at the desired position.
-    HRIR = squeeze((hrtfData(idx_pos, :,:)));
+    HRIR = squeeze((hrtfData(idx_pos, :,:))); 
     
     % Read audio from file   
     audioIn = sigsrc();
@@ -83,3 +88,17 @@ while toc < 30
 end
 release(sigsrc)
 release(deviceWriter)
+
+
+
+
+
+function [v, slope] = lininterp1(X, V, x, slope)
+% linear interpolation, given set of X and V values, and an x query
+% assumes X values are in strictly increasing order
+if isempty(slope)
+    slope = (x - X(end)) / (X(1) - X(end));
+end
+
+v = V(end) * (1 - slope) + V(1) * slope;
+end

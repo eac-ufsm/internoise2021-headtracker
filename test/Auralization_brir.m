@@ -3,7 +3,7 @@ clear all; clc
 
 %% Carregar objeto sofa
 path = 'bbcrdlr_all_speakers.sofa'; % download from : http://data.bbcarp.org.uk/bbcrd-brirs/sofa/
-Obj = SOFAload(path);
+Obj = SOFAload(path, 'nochecks');
 Fs = Obj.Data.SamplingRate;
 
 
@@ -48,11 +48,11 @@ if fs_audio ~= Obj.Data.SamplingRate
     audio = resample(audio, Obj.Data.SamplingRate, fs_audio);
 end
 
-audio = audio./max(abs(audio(:)))*.9;
+audio = audio./max(abs(audio(:)))*.975;
 n_ch_audio = size(audio,2); 
 
 % Criar objeto DSP
-samples_per_frame = 512;
+samples_per_frame = 1024;
 sigsrc = dsp.SignalSource(audio, samples_per_frame);
 deviceWriter = audioDeviceWriter('SampleRate', Fs, "BitDepth","16-bit integer");
 setup(deviceWriter, zeros(samples_per_frame, 2))
@@ -72,10 +72,10 @@ udpr = dsp.UDPReceiver('RemoteIPAddress', '127.0.0.1',...
 PartitionSize = 2^nextpow2(n_samples/4);
 
 for s=1:n_ch_audio
-    firBRIR1{s} =  dsp.FrequencyDomainFIRFilter('Method', 'overlap-add',...
+    firBRIR1{s} =  dsp.FrequencyDomainFIRFilter('Method', 'overlap-save',...
                                               'PartitionForReducedLatency', true,...
                                               'PartitionLength', PartitionSize );
-    firBRIR2{s} =  dsp.FrequencyDomainFIRFilter('Method', 'overlap-add',...
+    firBRIR2{s} =  dsp.FrequencyDomainFIRFilter('Method', 'overlap-save',...
                                               'PartitionForReducedLatency', true,...
                                               'PartitionLength', PartitionSize);
 end
@@ -92,7 +92,7 @@ idx_changer = inf;
 % Initialize head orientation
 yaw = 0;    % head tracker
 idx_hato = dsearchn(pos, yaw);
-% IR = BRIRs(:,:,:,idx_hato);
+% BRIRs = BRIRs(:,1:8192,:,:);
 
 
 % Play --------------------------------------------------------------------
