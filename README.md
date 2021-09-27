@@ -21,6 +21,8 @@
 
 Support files for the Internoise 2021 paper "Head tracker using webcam for auralization".
 
+- **Further updates to this software are published at [this repository](https://github.com/eac-ufsm/webcam-headtracker).**
+
 ## Description
 **Head tracker via camera face tracking and communication via UDP protocol.**
 
