@@ -43,6 +43,7 @@ Support files for the Internoise 2021 paper "Head tracker using webcam for aural
 |  macOS  | Tested on v10.15 and v11.2.1 (amd_64) |
 |  Linux  | Tested on Ubuntu 18.04.5 LTS          |
 
+-It also works on **Raspberry Pi**.
 
 <br/><br/>
 ## Setup python environment
@@ -58,6 +59,11 @@ Support files for the Internoise 2021 paper "Head tracker using webcam for aural
   pip install -r requirements.txt
   ``` 
 - MediaPipe supports Python 3.6 to 3.8.
+
+### Raspberry Pi
+  Install OpenCV and mediapipe from the sources bellow:
+- OpenCV: https://pimylifeup.com/raspberry-pi-opencv/
+- Mediapipe: https://pypi.org/project/mediapipe-rpi4/
 
 ## Using the HeadTracker
   The application can be initialized with:
