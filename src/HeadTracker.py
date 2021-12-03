@@ -129,10 +129,10 @@ def processing():
               pos = np.array((frame_width*landmarks[0, ii], frame_height*landmarks[1, ii])).astype(np.int32)
               image = cv2.circle(image, tuple(pos), 2, (0, 255, 0), -1)
 
-              p1 = ( int(image_points[0][0]), int(image_points[0][1]))
-              p2 = ( int(nose_end_point2D[0][0][0]), int(nose_end_point2D[0][0][1]))
+          p1 = ( int(image_points[0][0]), int(image_points[0][1]))
+          p2 = ( int(nose_end_point2D[0][0][0]), int(nose_end_point2D[0][0][1]))
 
-              image = cv2.arrowedLine(image, p1, p2, (0,0,200), 2)
+          image = cv2.arrowedLine(image, p1, p2, (0,0,200), 2)
 
           # UDP Listening to ports
           coords = send_to_server()    
